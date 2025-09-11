@@ -11,8 +11,7 @@ export default function BlogPage() {
         <div className="text-center px-6">
           <h1 className="font-mono text-5xl text-white">Blog</h1>
           <p className="mt-4 text-lg text-neutral-200 max-w-2xl">
-            Welcome to the blog. This content is rendered on top of the same CodexSplash
-            background used site-wide. Add posts or any blog-related UI here.
+            I be writing hella blogs.
           </p>
         </div>
       </div>

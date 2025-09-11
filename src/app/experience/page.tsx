@@ -11,9 +11,7 @@ export default function ExperiencePage() {
         <div className="text-center px-6">
           <h1 className="font-mono text-5xl text-white">Experience</h1>
           <p className="mt-4 text-lg text-neutral-200 max-w-2xl">
-            Here you can describe your experience. This text is rendered on top of the
-            same CodexSplash background thats used sitewide. Edit this page to show
-            any content you want for the experience section.
+            I am a cracked software engineer with experience in robotics, ML, and web development.
           </p>
         </div>
       </div>

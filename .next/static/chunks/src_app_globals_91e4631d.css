@@ -70,11 +70,16 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: .25rem;
+    --container-2xl: 42rem;
     --container-6xl: 72rem;
     --text-sm: .875rem;
     --text-sm--line-height: calc(1.25 / .875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
     --tracking-wide: .025em;
     --radius-2xl: 1rem;
     --default-transition-duration: .15s;
@@ -486,6 +491,14 @@
     z-index: calc(10 * -1);
   }
 
+  .z-0 {
+    z-index: 0;
+  }
+
+  .z-10 {
+    z-index: 10;
+  }
+
   .z-20 {
     z-index: 20;
   }
@@ -537,6 +550,10 @@
     margin-top: calc(var(--spacing) * 3);
   }
 
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -561,8 +578,16 @@
     height: 100%;
   }
 
+  .min-h-\[calc\(100vh-4rem\)\] {
+    min-height: calc(100vh - 4rem);
+  }
+
   .min-h-screen {
     min-height: 100vh;
+  }
+
+  .max-w-2xl {
+    max-width: var(--container-2xl);
   }
 
   .max-w-6xl {
@@ -575,6 +600,10 @@
 
   .items-center {
     align-items: center;
+  }
+
+  .justify-center {
+    justify-content: center;
   }
 
   .gap-2 {
@@ -626,12 +655,20 @@
     padding: calc(var(--spacing) * 0);
   }
 
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
 
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
+  }
+
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
   }
 
   .py-1 {
@@ -646,8 +683,22 @@
     padding-top: calc(var(--spacing) * 16);
   }
 
+  .text-center {
+    text-align: center;
+  }
+
   .font-mono {
     font-family: var(--font-geist-mono);
+  }
+
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
 
   .text-sm {

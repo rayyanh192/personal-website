@@ -47,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen text-neutral-200">
         {/* site-wide background */}
         <AsciiGradientField
-          className="-z-10 pointer-events-none" // sits behind everything & doesn't block clicks
+          className="z-0 pointer-events-none" // sits behind everything & doesn't block clicks
           scale={0.10}
           speed={1.1}
         />

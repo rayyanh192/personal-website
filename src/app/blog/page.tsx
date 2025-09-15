@@ -9,9 +9,9 @@ export default function BlogPage() {
       {/* Overlay text that sits above the CodexSplash background (CodexSplash is rendered in root layout) */}
       <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
         <div className="text-center px-6">
-          <h1 className="font-mono text-5xl text-white">Blog</h1>
+          <h1 className="font-mono text-5xl text-white">Blogs</h1>
           <p className="mt-4 text-lg text-neutral-200 max-w-2xl">
-            I be writing hella blogs.
+            TBD.
           </p>
         </div>
       </div>

@@ -18,13 +18,13 @@ export default function Page() {
             <div>
               <h1 className="font-mono text-4xl text-white">About Me</h1>
               <p className="mt-2 text-neutral-200 max-w-xl">
-                Hey there, my name is Rayyan. I am a risk taker, a roadrunner, and an entrepreneur. On the side, I am a 
-                computer science and engineering student at Santa Clara University. I love building anything creative 
-                from cool ascii art to ML in robotics. Welcome, and say hi on your way out!
+                Hey there, my name is Rayyan. I am a risk taker, a roadrunner, and an entrepreneur. On the side, 
+                I am a computer science and engineering student at Santa Clara University. I love building anything
+                creative from cool ascii art to ML in robotics. Welcome, and say hi on your way out!
 
               </p>
 
-              <p className="mt-4 text-sm text-neutral-400 font-mono">Location • interests • contact</p>
+              <p className="mt-4 text-sm text-neutral-400 font-mono">rayyanhussain2024@gmail.com</p>
             </div>
           </div>
         </div>

@@ -56,7 +56,7 @@ export async function GET() {
       isPlaying: Boolean(json.is_playing),
       title: item?.name ?? "",
       album: item?.album?.name ?? "",
-      artist: (item?.artists ?? []).map((a: any) => a.name).join(", "),
+      artist: (item?.artists ?? []).map((a: { name: string }) => a.name).join(", "),
       albumImageUrl: item?.album?.images?.[0]?.url ?? "",
       songUrl: item?.external_urls?.spotify ?? "",
     };

@@ -26,7 +26,7 @@ export default function Page() {
           </div>
 
           <div className="mt-6 flex items-start justify-center">
-            <SpotifyNowPlaying />
+              <SpotifyNowPlaying />
           </div>
         </div>
       </div>

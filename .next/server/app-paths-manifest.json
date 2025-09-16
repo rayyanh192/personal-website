@@ -1,8 +1,5 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/api/spotify/route": "app/api/spotify/route.js",
-  "/blog/page": "app/blog/page.js",
-  "/experience/page": "app/experience/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"
 }

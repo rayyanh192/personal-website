@@ -75,8 +75,8 @@ export default function SpotifyNowPlaying() {
         <Image
             src="/spotify.png"
             alt=""
-            width={28}
-            height={28}
+            width={36}
+            height={36}
             className="opacity-80 hover:opacity-100 transition-opacity select-none"
         />
         </a>

@@ -925,11 +925,6 @@
     text-transform: uppercase;
   }
 
-  .antialiased {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
   .opacity-80 {
     opacity: .8;
   }

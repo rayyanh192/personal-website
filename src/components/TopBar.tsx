@@ -39,13 +39,28 @@ export default function TopBar() {
         <div className="flex items-center gap-2 px-4 py-2 h-full">
           {/* left group */}
           <div className="flex items-center gap-2">
-            {item("/", "home", s => `[ ${s} ]`)}
+            {item("/", "home", (s) => `[ ${s} ]`)}
             <span className="text-neutral-600 select-none">::</span>
-            {item("/experience", "experience", s => `[ ${s} ]`)}
-            {item("/blog", "blog", s => `[ ${s} ]`)}
+            {item("/experience", "experience", (s) => `[ ${s} ]`)}
+            {item("/blog", "blog", (s) => `[ ${s} ]`)}
           </div>
         </div>
       </nav>
+
+      {/* fixed icons at top-right of viewport (outside the nav) */}
+      <div className="fixed top-4 right-4 z-30 flex items-center gap-3">
+        <a href="https://github.com/rayyanh192" aria-label="GitHub" className="p-1 rounded hover:bg-white/5">
+          <img src="/github.png" alt="GitHub" className="w-6 h-6" />
+        </a>
+
+        <a href="https://www.linkedin.com/in/rayyan-h/" aria-label="LinkedIn" className="p-1 rounded hover:bg-white/5">
+          <img src="/linkedin.png" alt="LinkedIn" className="w-6 h-6" />
+        </a>
+
+        <a href="#" aria-label="Resume" className="p-1 rounded hover:bg-white/5">
+          <img src="/resume.png" alt="Resume" className="w-6 h-6" />
+        </a>
+      </div>
     </div>
   );
 }

@@ -512,12 +512,20 @@
     top: calc(var(--spacing) * 0);
   }
 
+  .top-4 {
+    top: calc(var(--spacing) * 4);
+  }
+
   .top-20 {
     top: calc(var(--spacing) * 20);
   }
 
   .right-3 {
     right: calc(var(--spacing) * 3);
+  }
+
+  .right-4 {
+    right: calc(var(--spacing) * 4);
   }
 
   .bottom-3 {
@@ -534,6 +542,10 @@
 
   .z-20 {
     z-index: 20;
+  }
+
+  .z-30 {
+    z-index: 30;
   }
 
   .container {
@@ -628,6 +640,10 @@
     height: calc(var(--spacing) * 2);
   }
 
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
+
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
@@ -650,6 +666,10 @@
 
   .min-h-screen {
     min-height: 100vh;
+  }
+
+  .w-6 {
+    width: calc(var(--spacing) * 6);
   }
 
   .w-20 {
@@ -704,12 +724,20 @@
     align-items: flex-start;
   }
 
+  .justify-between {
+    justify-content: space-between;
+  }
+
   .justify-center {
     justify-content: center;
   }
 
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
 
   .gap-4 {
@@ -800,6 +828,10 @@
 
   .p-0 {
     padding: calc(var(--spacing) * 0);
+  }
+
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
   }
 
   .p-4 {
@@ -971,6 +1003,18 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-white\/5:hover {
+      background-color: rgba(255, 255, 255, .05);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-white\/5:hover {
+        background-color: color-mix(in oklab, var(--color-white) 5%, transparent);
+      }
+    }
   }
 
   @media (hover: hover) {

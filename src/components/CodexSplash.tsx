@@ -259,7 +259,7 @@ const AsciiGradientField: React.FC<Props> = ({
     >
       <pre
         ref={preRef}
-        className="m-0 p-0 text-white/15"
+        className="m-0 p-0 text-white/23"
         style={{
           position: "absolute",
           inset: 0,

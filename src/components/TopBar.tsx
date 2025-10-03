@@ -50,15 +50,15 @@ export default function TopBar() {
       {/* fixed icons at top-right of viewport (outside the nav) */}
       <div className="fixed top-4 right-4 z-30 flex items-center gap-3">
         <a href="https://github.com/rayyanh192" aria-label="GitHub" className="p-1 rounded hover:bg-white/5">
-          <img src="/github.png" alt="GitHub" className="w-6 h-6" />
+          <img src="/github.png" alt="GitHub" className="w-8 h-8" />
         </a>
 
         <a href="https://www.linkedin.com/in/rayyan-h/" aria-label="LinkedIn" className="p-1 rounded hover:bg-white/5">
-          <img src="/linkedin.png" alt="LinkedIn" className="w-6 h-6" />
+          <img src="/linkedin.png" alt="LinkedIn" className="w-8 h-8" />
         </a>
 
-        <a href="#" aria-label="Resume" className="p-1 rounded hover:bg-white/5">
-          <img src="/resume.png" alt="Resume" className="w-6 h-6" />
+        <a href="/rayyan-hussain.pdf" aria-label="Resume" className="p-1 rounded hover:bg-white/5">
+          <img src="/resume.png" alt="Resume" className="w-8 h-8" />
         </a>
       </div>
     </div>

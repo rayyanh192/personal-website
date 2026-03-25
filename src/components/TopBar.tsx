@@ -42,6 +42,7 @@ export default function TopBar() {
             {item("/", "home", (s) => `[ ${s} ]`)}
             <span className="text-neutral-600 select-none">::</span>
             {item("/experience", "experience", (s) => `[ ${s} ]`)}
+            {item("/projects", "projects", (s) => `[ ${s} ]`)}
             {item("/blog", "blog", (s) => `[ ${s} ]`)}
           </div>
         </div>
@@ -55,6 +56,12 @@ export default function TopBar() {
 
         <a href="https://www.linkedin.com/in/rayyan-h/" aria-label="LinkedIn" className="p-1 rounded hover:bg-white/5">
           <img src="/linkedin.png" alt="LinkedIn" className="w-8 h-8" />
+        </a>
+
+        <a href="https://x.com/xrayz_0" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer" className="p-1 rounded hover:bg-white/5">
+          <svg className="w-8 h-8" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
         </a>
 
         <a href="/rayyan-hussain.pdf" aria-label="Resume" className="p-1 rounded hover:bg-white/5">

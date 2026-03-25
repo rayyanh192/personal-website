@@ -7,7 +7,7 @@ import { BlogPost } from "@/types/blog";
 export const metadata = { title: "Blog" };
 export const revalidate = 3600; // ISR: revalidate every hour
 
-const SUBSTACK_URL = "https://substack.com/@rayyannh";
+const SUBSTACK_URL = "https://rrayyannh.substack.com";
 
 async function getPosts(): Promise<BlogPost[]> {
   try {

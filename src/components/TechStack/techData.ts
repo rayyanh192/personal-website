@@ -2,19 +2,25 @@ import { IconType } from "react-icons";
 import {
   SiPython,
   SiTypescript,
+  SiJavascript,
   SiCplusplus,
+  SiSwift,
   SiReact,
   SiNextdotjs,
   SiTailwindcss,
   SiNodedotjs,
   SiFastapi,
+  SiServerless,
   SiRos,
   SiPytorch,
   SiTensorflow,
+  SiNvidia,
   SiGit,
   SiDocker,
   SiLinux,
+  SiGithubactions,
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 
 export type Tech = {
   name: string;
@@ -23,7 +29,13 @@ export type Tech = {
   description?: string;
 };
 
-export type TechCategory = "languages" | "frontend" | "backend" | "robotics" | "tools";
+export type TechCategory =
+  | "languages"
+  | "frontend"
+  | "backend"
+  | "cloud"
+  | "ml"
+  | "tools";
 
 export const techData: Record<TechCategory, Tech[]> = {
   languages: [
@@ -31,7 +43,7 @@ export const techData: Record<TechCategory, Tech[]> = {
       name: "Python",
       Icon: SiPython,
       color: "#3776ab",
-      description: "ML, scripting, automation",
+      description: "ML, backend, automation",
     },
     {
       name: "TypeScript",
@@ -40,10 +52,22 @@ export const techData: Record<TechCategory, Tech[]> = {
       description: "Type-safe JavaScript",
     },
     {
+      name: "JavaScript",
+      Icon: SiJavascript,
+      color: "#f7df1e",
+      description: "Web development",
+    },
+    {
       name: "C++",
       Icon: SiCplusplus,
       color: "#00599c",
       description: "Systems, robotics",
+    },
+    {
+      name: "Swift",
+      Icon: SiSwift,
+      color: "#f05138",
+      description: "iOS development",
     },
   ],
   frontend: [
@@ -80,13 +104,21 @@ export const techData: Record<TechCategory, Tech[]> = {
       description: "Python API framework",
     },
   ],
-  robotics: [
+  cloud: [
     {
-      name: "ROS 2",
-      Icon: SiRos,
-      color: "#22314e",
-      description: "Robot Operating System",
+      name: "AWS",
+      Icon: FaAws,
+      color: "#ff9900",
+      description: "EC2, Lambda, S3, Amplify",
     },
+    {
+      name: "Serverless",
+      Icon: SiServerless,
+      color: "#fd5750",
+      description: "Lambda, Step Functions",
+    },
+  ],
+  ml: [
     {
       name: "PyTorch",
       Icon: SiPytorch,
@@ -98,6 +130,18 @@ export const techData: Record<TechCategory, Tech[]> = {
       Icon: SiTensorflow,
       color: "#ff6f00",
       description: "ML framework",
+    },
+    {
+      name: "NVIDIA",
+      Icon: SiNvidia,
+      color: "#76b900",
+      description: "GPU & AI tools",
+    },
+    {
+      name: "ROS 2",
+      Icon: SiRos,
+      color: "#22314e",
+      description: "Robot Operating System",
     },
   ],
   tools: [
@@ -119,6 +163,12 @@ export const techData: Record<TechCategory, Tech[]> = {
       color: "#fcc624",
       description: "Operating system",
     },
+    {
+      name: "GitHub Actions",
+      Icon: SiGithubactions,
+      color: "#2088ff",
+      description: "CI/CD automation",
+    },
   ],
 };
 
@@ -126,6 +176,7 @@ export const categoryLabels: Record<TechCategory, string> = {
   languages: "Languages",
   frontend: "Frontend",
   backend: "Backend",
-  robotics: "Robotics & ML",
-  tools: "Tools",
+  cloud: "Cloud & AWS",
+  ml: "ML & Robotics",
+  tools: "Tools & DevOps",
 };

@@ -10,6 +10,9 @@ type Props = {
 const SponsorLogos: Record<string, string> = {
   nvidia: "/nvidia.png",
   antler: "/antler.png",
+  aws: "/aws.png",
+  inrix: "/inrix.png",
+  acm: "/acm.png",
 };
 
 export default function ProjectCard({ project }: Props) {
@@ -32,9 +35,17 @@ export default function ProjectCard({ project }: Props) {
       {/* Award Badge - larger and more prominent for featured */}
       {project.award && (
         <div className={`absolute -top-3 -right-3 px-4 py-1.5 rounded-full border font-mono z-10 ${
-          isFeatured
-            ? "bg-amber-500 border-amber-400 text-white text-sm font-semibold shadow-[0_0_20px_rgba(245,158,11,0.5)]"
-            : "bg-amber-500 border-amber-400 text-white text-xs font-semibold"
+          project.award.includes("4th")
+            ? isFeatured
+              ? "bg-gradient-to-r from-[#8B5A2B] to-[#CD853F] border-[#CD7F32] text-white text-sm font-semibold shadow-[0_0_20px_rgba(205,127,50,0.5)]"
+              : "bg-gradient-to-r from-[#8B5A2B] to-[#CD853F] border-[#CD7F32] text-white text-xs font-semibold"
+            : project.award.includes("2nd")
+              ? isFeatured
+                ? "bg-gradient-to-r from-[#A8A8A8] to-[#D8D8D8] border-[#C0C0C0] text-white text-sm font-semibold shadow-[0_0_20px_rgba(192,192,192,0.5)]"
+                : "bg-gradient-to-r from-[#A8A8A8] to-[#D8D8D8] border-[#C0C0C0] text-white text-xs font-semibold"
+              : isFeatured
+                ? "bg-amber-500 border-amber-400 text-white text-sm font-semibold shadow-[0_0_20px_rgba(245,158,11,0.5)]"
+                : "bg-amber-500 border-amber-400 text-white text-xs font-semibold"
         }`}>
           {project.award}
         </div>
@@ -45,11 +56,11 @@ export default function ProjectCard({ project }: Props) {
         <div className="flex flex-col md:flex-row gap-6">
           {/* Left: Image */}
           <div className="flex-shrink-0">
-            <div className="rounded-xl overflow-hidden border border-emerald-500/30 inline-block">
+            <div className="rounded-xl overflow-hidden border border-emerald-500/30 w-64 h-48">
               <img
                 src={project.imageUrl}
                 alt={project.title}
-                className="h-48 w-auto object-contain"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>

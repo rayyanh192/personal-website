@@ -9,6 +9,7 @@ type Props = {
   direction?: "up" | "down" | "left" | "right" | "none";
   delay?: number;
   duration?: number;
+  immediate?: boolean;
 };
 
 export default function FadeInSection({
@@ -17,8 +18,20 @@ export default function FadeInSection({
   direction = "up",
   delay = 0,
   duration = 600,
+  immediate = false,
 }: Props) {
-  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
+  const { ref, isVisible: observerVisible } = useIntersectionObserver({ threshold: 0.1 });
+  const [immediateVisible, setImmediateVisible] = React.useState(false);
+
+  React.useEffect(() => {
+    if (immediate) {
+      // Trigger animation after a small delay to allow initial render
+      const timer = setTimeout(() => setImmediateVisible(true), 10);
+      return () => clearTimeout(timer);
+    }
+  }, [immediate]);
+
+  const isVisible = immediate ? immediateVisible : observerVisible;
 
   const getTransform = () => {
     if (isVisible) return "translate(0, 0)";

@@ -12,7 +12,7 @@ Available commands:
   skills    - View my technical skills
   projects  - See my projects
   contact   - Get my contact info
-  flight    - Take flight
+  flight    - ftc
   clear     - Clear the terminal
   secret    - ???
     `.trim(),

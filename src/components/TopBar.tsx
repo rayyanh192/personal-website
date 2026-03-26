@@ -24,29 +24,31 @@ export default function TopBar() {
   };
 
   return (
-    <div className="fixed top-0 inset-x-0 z-20 h-15">
-      <nav
-        className="
-          mx-auto mt-3 mb-2 max-w-6xl
-          rounded-2xl border
-          bg-neutral-900/70
-          border-neutral-800/70
-          shadow-[0_0_0_1px_rgba(255,255,255,0.03)_inset]
-          backdrop-blur
-          h-full
-        "
-      >
-        <div className="flex items-center gap-2 px-4 py-2 h-full">
-          {/* left group */}
-          <div className="flex items-center gap-2">
-            {item("/", "home", (s) => `[ ${s} ]`)}
-            <span className="text-neutral-600 select-none">::</span>
-            {item("/experience", "experience", (s) => `[ ${s} ]`)}
-            {item("/projects", "projects", (s) => `[ ${s} ]`)}
-            {item("/blog", "blog", (s) => `[ ${s} ]`)}
+    <>
+      <div className="fixed top-0 inset-x-0 z-20 h-15">
+        <nav
+          className="
+            mx-auto mt-3 mb-2 max-w-6xl
+            rounded-2xl border
+            bg-neutral-900/70
+            border-neutral-800/70
+            shadow-[0_0_0_1px_rgba(255,255,255,0.03)_inset]
+            backdrop-blur
+            h-full
+          "
+        >
+          <div className="flex items-center gap-2 px-4 py-2 h-full">
+            {/* left group */}
+            <div className="flex items-center gap-2">
+              {item("/", "home", (s) => `[ ${s} ]`)}
+              <span className="text-neutral-600 select-none">::</span>
+              {item("/experience", "experience", (s) => `[ ${s} ]`)}
+              {item("/projects", "projects", (s) => `[ ${s} ]`)}
+              {item("/blog", "blog", (s) => `[ ${s} ]`)}
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
 
       {/* fixed icons at top-right of viewport (outside the nav) */}
       <div className="fixed top-3 right-6 z-30">
@@ -85,6 +87,6 @@ export default function TopBar() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

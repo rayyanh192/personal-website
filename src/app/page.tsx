@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import SpotifyNowPlaying from "@/components/NowPlaying";
 import Terminal from "@/components/Terminal/Terminal";
 import TypewriterText from "@/components/TypewriterText";
@@ -12,6 +12,10 @@ import CurrentlyLearning from "@/components/CurrentlyLearning";
 import FunFacts from "@/components/FunFacts";
 
 export default function Page() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="relative min-h-[calc(100vh-4rem)] pb-20">
       {/* Spotify Widget - Fixed on left side */}
@@ -35,7 +39,7 @@ export default function Page() {
                 <h1 className="font-mono text-4xl text-white">About Me</h1>
                 <p className="mt-2 text-neutral-200 max-w-xl">
                   <TypewriterText
-                    text="Hey there, my name is Rayyan. I am a risk taker, a roadrunner, and an entrepreneur. On the side, I am a computer science and engineering student at Santa Clara University. I love building anything creative from cool ascii art to ML in robotics. Welcome, and say hi on your way out!"
+                    text="Hey there, my name is Rayyan. I am a sophomore cs&engineering student at Santa Clara University. I love building anything creative from cool ascii art to ML in robotics and winning hackathons. Welcome, and say hi on your way out!"
                     speed={12}
                     delay={800}
                   />
@@ -82,21 +86,21 @@ export default function Page() {
           </div>
 
           {/* Currently Learning */}
-          <FadeInSection direction="up" delay={600}>
+          <FadeInSection direction="up" delay={600} immediate>
             <div className="mt-6 max-w-4xl mx-auto">
               <CurrentlyLearning />
             </div>
           </FadeInSection>
 
           {/* Fun Facts */}
-          <FadeInSection direction="up" delay={700}>
+          <FadeInSection direction="up" delay={700} immediate>
             <div className="mt-6 max-w-4xl mx-auto">
               <FunFacts />
             </div>
           </FadeInSection>
 
           {/* Tech Stack */}
-          <FadeInSection direction="up" delay={800}>
+          <FadeInSection direction="up" delay={800} immediate>
             <div className="mt-6 max-w-4xl mx-auto">
               <TechStack />
             </div>

@@ -12,6 +12,7 @@ Available commands:
   skills    - View my technical skills
   projects  - See my projects
   contact   - Get my contact info
+  flight    - Take flight
   clear     - Clear the terminal
   secret    - ???
     `.trim(),
@@ -31,16 +32,17 @@ Available commands:
 
   skills: () => ({
     output: `
-╔═══════════════════════════════════════╗
-║         TECHNICAL SKILLS              ║
-╠═══════════════════════════════════════╣
-║ Languages:  Python, TypeScript, C++   ║
-║ Frontend:   React, Next.js, Tailwind  ║
-║ Backend:    Node.js, FastAPI          ║
-║ ML/AI:      PyTorch, TensorFlow       ║
-║ Robotics:   ROS 2, OptiTrack          ║
-║ Tools:      Git, Docker, Linux        ║
-╚═══════════════════════════════════════╝
+╔════════════════════════════════════════════╗
+║           TECHNICAL SKILLS                 ║
+╠════════════════════════════════════════════╣
+║ Languages:  Python, TypeScript, C++, Swift ║
+║ Frontend:   React, Next.js, Tailwind       ║
+║ Backend:    Node.js, FastAPI               ║
+║ ML/AI:      PyTorch, TensorFlow, RAG       ║
+║ Robotics:   ROS 2, OptiTrack               ║
+║ Mobile:     iOS, SwiftUI                   ║
+║ Tools:      Git, Docker, Linux, NVIDIA DGX ║
+╚════════════════════════════════════════════╝
     `.trim(),
   }),
 
@@ -49,16 +51,20 @@ Available commands:
 ┌──────────────────────────────────────────┐
 │  FEATURED PROJECTS                       │
 ├──────────────────────────────────────────┤
-│  [1] Drone Swarm Control                 │
+│  [1] Power2ThePeople  ★ 1ST PLACE        │
+│      AI legal rights assistant           │
+│      NVIDIA Spark Hackathon 2026         │
+│                                          │
+│  [2] Drone Swarm Control                 │
 │      Multi-robot adaptive navigation     │
 │      with Crazyflie microdrones          │
 │                                          │
-│  [2] ASCII Art Engine                    │
+│  [3] ASCII Art Engine                    │
 │      Perlin noise animated backgrounds   │
 │      (you're looking at it!)             │
 │                                          │
-│  [3] More on GitHub...                   │
-│      github.com/rayyanh                  │
+│  [4] More on GitHub...                   │
+│      github.com/rayyanh192                │
 └──────────────────────────────────────────┘
     `.trim(),
   }),
@@ -137,6 +143,28 @@ Available commands:
       Host: Personal Website
       Shell: Custom Terminal
       Theme: Dark Mode
+    `.trim(),
+  }),
+
+  flight: () => ({
+    output: `
+⣿⣿⣿⣿⠿⠿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣸⣿⣿⣿⣿⣾⠿⣿⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣺⣿
+⣿⣿⣿⣿⠀⠀⠀⠀⠀⠉⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽⣿⣿⣿⣿⣿⣿⣿⢿⠛⠉⢒⣠⢽⡿⣿⣿⣿⣿⣿⣿⣹⣿
+⣿⣿⣿⣿⠀⠀⠀⠀⠀⠰⣖⣦⠟⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡝⣿⣿⣿⣿⣿⣿⣿⣿⠟⣚⠁⠀⠀⠀⠉⠁⠙⣽⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣇⢀⠀⠀⠀⡀⡀⡀⠙⢧⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣿⣿⣿⣿⣿⣿⣿⣏⡾⠿⡀⡀⠀⠀⣠⣯⣤⠸⣾⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣦⡇⠀⣸⢦⣷⢶⡀⠈⠀⠀⠈⠟⢛⢙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⢠⣼⣷⣽⡄⠀⣿⣛⠞⠀⣽⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⠿⡇⠀⢿⣿⣿⣓⡧⠀⠀⠀⠀⢰⣶⢸⣏⣹⣽⣽⣿⣿⣿⡿⢿⣿⣿⣿⢿⣝⠸⠿⣗⡿⡄⠀⠈⠁⠀⠀⣿⣿⣽⣿⣭⣿⣿
+⡯⣿⣿⣿⠈⠀⠀⠀⢳⣽⠎⠀⠀⠀⠀⠀⢠⡜⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽⣿⠀⠙⠛⢁⣧⢀⢀⡀⠀⠀⣿⣿⣿⣿⣿⣿⣿
+⣯⣿⣿⣿⠀⠀⠀⢀⠀⠉⠁⠀⠀⠀⠀⠀⡠⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⢸⣿⣶⡛⢁⡀⠀⣟⣭⢿⣿⣿⡿⣉
+⣿⣿⣿⣿⢠⣠⣀⠈⠆⠀⠀⠀⠀⠀⠀⠀⠰⣾⣿⣿⣿⡟⣉⡹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⢀⢎⡠⣷⢯⣻⠷⠀⣿⣿⣾⣿⣿⣇⡿
+⣿⣿⣿⣿⡄⠙⠻⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⡅⣿⣷⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠻⠛⣟⡻⡰⠀⡀⢻⣿⣿⣿⣿⣿⠀
+⣿⣿⣿⣿⡏⢒⡲⢤⣲⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣷⡏⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⢘⢛⣋⣥⣾⡁⢞⢿⣿⣿⣿⣿⡇
+⣿⣿⣿⣿⡇⠻⠶⠒⠻⣆⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⡇⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠒⡄⢹⣿⣿⡿⠃⡿⢸⠀⠈⠙⠻⣿⣇
+⣿⣿⣿⣿⣿⡜⢤⣦⠄⠉⠀⠀⠀⠀⠀⠁⢾⣿⣿⣿⣿⣿⡇⠀⠀⣿⣿⣿⣿⣿⣿⣿⠟⠊⠀⠀⠇⠀⢻⠋⢀⢧⢠⢸⠀⠀⠀⠀⠈⠻
+⣿⣿⣿⣿⣿⢳⣶⣤⣤⣤⣀⣀⠄⠁⠈⠸⠈⡎⠉⠻⣽⣿⣧⠀⠀⣿⣿⣿⣆⠖⠋⠁⠀⠀⠀⠀⡇⠀⠨⢃⡘⣆⢹⡟⠀⠀⠀⠀⠀⠀
+⣽⣿⣿⡽⠃⠈⠛⢿⠿⠿⣿⠋⠀⠀⠀⠀⠀⠁⠀⠀⠈⢻⣿⠀⠀⣿⡿⣧⠃⠀⠀⠀⠀⠀⠀⠀⢹⠀⠀⠚⠀⠀⣿⠁⠀⠀⠀⠀⠀⠀
+
+    you can call me ftc
     `.trim(),
   }),
 };

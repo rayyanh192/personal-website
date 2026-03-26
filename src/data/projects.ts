@@ -10,35 +10,31 @@ export type Project = {
   githubUrl?: string;
   imageUrl?: string;
   date: string;
+  featured?: boolean;
+  sponsors?: { name: string; logo: "nvidia" | "antler" | "dell" | "arm" | "scu" }[];
+  teamMembers?: string[];
 };
 
 export const projects: Project[] = [
   // === HACKATHON WINS ===
   {
-    id: "hackathon-project-1",
-    title: "Project Name",
+    id: "power2thepeople",
+    title: "Power2ThePeople",
     description:
-      "Brief description of what this project does and what problem it solves.",
-    techStack: ["React", "Python", "OpenAI API"],
+      "AI-powered legal rights assistant that analyzes live video and audio to evaluate interaction legality and detect potential abuse of power. Provides real-time guidance through Meta Glasses or mobile devices, tracks encounters, and uses RAG trained on SF misconduct data to surface comparable cases.",
+    techStack: ["Python", "Swift", "NVIDIA DGX Spark", "RAG", "iOS"],
     category: "hackathon",
-    award: "1st Place",
-    hackathonName: "HackathonName 2025",
-    demoUrl: "https://demo-link.com",
-    githubUrl: "https://github.com/rayyanh192/project",
-    date: "2025-01-15",
-  },
-  {
-    id: "hackathon-project-2",
-    title: "Another Hackathon Project",
-    description:
-      "Description of your second hackathon win. What did you build and why?",
-    techStack: ["Next.js", "TypeScript", "Tailwind"],
-    category: "hackathon",
-    award: "Best AI/ML Hack",
-    hackathonName: "TreeHacks 2025",
-    demoUrl: "https://demo-link.com",
-    githubUrl: "https://github.com/rayyanh192/project2",
-    date: "2025-02-20",
+    award: "1st Place - Human Impact",
+    hackathonName: "NVIDIA Spark Hackathon 2026",
+    githubUrl: "https://github.com/rayyanh192/Power2ThePeople",
+    imageUrl: "/nvidiawin.jpeg",
+    date: "2026-01-29",
+    featured: true,
+    sponsors: [
+      { name: "NVIDIA", logo: "nvidia" },
+      { name: "Antler", logo: "antler" },
+    ],
+    teamMembers: ["Rayyan Hussain", "Abhinav Ala", "Edrick Chang", "Abraham Bhatti"],
   },
 
   // === PERSONAL PROJECTS ===

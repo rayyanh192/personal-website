@@ -5,11 +5,11 @@
   "scripts": {
     "predev": "rm -rf .next",
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "clean": "rm -rf .next",
-    "build:clean": "rm -rf .next && next build --turbopack"
+    "build:clean": "rm -rf .next && next build"
   },
   "dependencies": {
     "next": "15.5.9",

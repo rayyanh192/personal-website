@@ -7,18 +7,16 @@ export type LearningItem = {
 
 export const currentlyLearning: LearningItem[] = [
   {
-    name: "LangChain",
-    emoji: "🔗",
-    description: "Building AI agents & RAG systems",
-    link: "https://langchain.com",
+    name: "GPU Programming",
+    emoji: "🖥️",
+    description: "Writing parallel kernels with CUDA",
   },
   {
-    name: "Quantum Computing",
-    emoji: "⚛️",
-    description: "Exploring quantum algorithms",
-    link: "https://qiskit.org",
+    name: "Linear Algebra",
+    emoji: "📐",
+    description: "Deepening foundations in matrices & transformations",
   },
 ];
 
 // Update this when you change what you're learning
-export const lastUpdated = "March 2025";
+export const lastUpdated = "April 2026";

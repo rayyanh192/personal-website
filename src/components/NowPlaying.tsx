@@ -60,7 +60,7 @@ export default function SpotifyNowPlaying() {
             </span>
           </div>
 
-          <h2 className="mt-1 font-mono text-sm text-white truncate">
+          <h2 className="mt-1 font-mono text-xs text-white truncate">
             {playing ? data?.title : "—"}
           </h2>
           <p className="text-neutral-300 text-xs truncate">{playing ? data?.artist : "—"}</p>

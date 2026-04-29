@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 const {
   SPOTIFY_CLIENT_ID: client_id,
   SPOTIFY_CLIENT_SECRET: client_secret,
@@ -40,7 +42,7 @@ export async function GET() {
     });
 
     // 204 = nothing playing
-    if (now.status === 204 || now.status > 400) {
+    if (now.status === 204 || now.status >= 400) {
       return NextResponse.json({ isPlaying: false });
     }
 
@@ -63,6 +65,7 @@ export async function GET() {
 
     return NextResponse.json(data, { headers: { "Cache-Control": "no-store" } });
   } catch (err) {
+    console.error("[Spotify API]", err);
     return NextResponse.json({ isPlaying: false });
   }
 }

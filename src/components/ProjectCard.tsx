@@ -19,18 +19,7 @@ export default function ProjectCard({ project }: Props) {
   const isFeatured = project.featured;
 
   return (
-    <div className={`group relative rounded-2xl bg-neutral-900/70 border p-6 shadow-[0_10px_30px_rgba(0,0,0,0.6)] backdrop-blur-md transition-all hover:shadow-[0_15px_40px_rgba(0,0,0,0.7)] ${
-      isFeatured
-        ? "border-emerald-500/50 hover:border-emerald-400/70"
-        : "border-neutral-800/70 hover:border-neutral-700/70"
-    }`}>
-      {/* Featured glow effect */}
-      {isFeatured && (
-        <>
-          <div className="absolute -inset-1 bg-gradient-to-br from-emerald-500/20 via-transparent to-emerald-500/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-80 transition-opacity pointer-events-none" />
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/5 via-transparent to-emerald-500/5 pointer-events-none" />
-        </>
-      )}
+    <div className="group relative rounded-2xl bg-neutral-900/70 border border-neutral-800/70 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.6)] backdrop-blur-md transition-all hover:shadow-[0_15px_40px_rgba(0,0,0,0.7)] hover:border-neutral-700/70">
 
       {/* Award Badge - larger and more prominent for featured */}
       {project.award && (

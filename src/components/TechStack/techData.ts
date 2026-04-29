@@ -14,7 +14,6 @@ import {
   SiRos,
   SiPytorch,
   SiTensorflow,
-  SiNvidia,
   SiGit,
   SiDocker,
   SiLinux,
@@ -130,12 +129,6 @@ export const techData: Record<TechCategory, Tech[]> = {
       Icon: SiTensorflow,
       color: "#ff6f00",
       description: "ML framework",
-    },
-    {
-      name: "NVIDIA",
-      Icon: SiNvidia,
-      color: "#76b900",
-      description: "GPU & AI tools",
     },
     {
       name: "ROS 2",

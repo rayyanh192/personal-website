@@ -29,7 +29,7 @@ export default function Page() {
         <div className="pointer-events-auto w-full max-w-6xl px-6">
           {/* About Me Card */}
           <FadeInSection direction="up" delay={100}>
-            <div className="mx-auto flex flex-col md:flex-row items-center gap-6 rounded-2xl bg-neutral-900/70 border border-neutral-800/70 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.6)] backdrop-blur-md">
+            <div className="mx-auto max-w-4xl flex flex-col md:flex-row items-center gap-6 rounded-2xl bg-neutral-900/70 border border-neutral-800/70 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.6)] backdrop-blur-md">
               <img
                 src="/rayhome.png"
                 alt="profile"
